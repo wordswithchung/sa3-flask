@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Application Form{% endblock %}
+{% block content %}
+    <h1>Application Form</h1>
+
+    <p>Thanks for your interest in Ubermelon! Please fill in the form below to get started.</p>
+
+    <form action="/application-response" method="post">
+        <label for="applicant-first-name">First Name: </label><input id="applicant-first-name" type="text" name="first-name">
+        <label for="applicant-last-name">Last Name: </label><input id="applicant-last-name" type="text" name="last-name">
+        <br>
+        <br>
+        <label for="salary-requirement">Annual Salary Requirement: </label><input id="salary-requirement" type="text" name="salary">
+        <br>
+        <br>
+        <label for="role-interested-in">Select the role you're interested in:</label>
+            <select id="role-interested-in" name="role">
+                <option value="Software Engineer">Software Engineer</option>
+                <option value="QA Engineer">QA Engineer</option>
+                <option value="Product Manager">Product Manager</option>
+            </select>
+        <br>
+        <br>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+{% endblock %}
